@@ -21,9 +21,9 @@ import (
 )
 
 type msgAndSecretKeys struct {
-	msgKey    string
-	secretKey string
-	urlMsg    string
+	MsgKey    string
+	SecretKey string
+	URLMsg    string
 }
 
 var tpl *template.Template
@@ -46,13 +46,13 @@ func index(w http.ResponseWriter, r *http.Request) {
 		skey := generatePassword()
 		encryptedMessage := encrypt(msg, skey)
 
-		keySystem.msgKey = mkey.String()
-		keySystem.secretKey = fmt.Sprintf("%x", skey)
-		keySystem.urlMsg = "/msg/" + keySystem.msgKey
+		keySystem.MsgKey = mkey.String()
+		keySystem.SecretKey = fmt.Sprintf("%x", skey)
+		keySystem.URLMsg = "/msg/" + keySystem.MsgKey
 
 		// store message in memcache
 		item := &memcache.Item{
-			Key:   keySystem.msgKey,
+			Key:   keySystem.MsgKey,
 			Value: []byte(encryptedMessage),
 		}
 
