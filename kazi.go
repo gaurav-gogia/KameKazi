@@ -6,9 +6,6 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/gorilla/csrf"
-
-	"github.com/gorilla/mux"
 	uuid "github.com/nu7hatch/gouuid"
 
 	"strings"
@@ -16,7 +13,6 @@ import (
 	"fmt"
 	"io"
 
-	"encoding/base32"
 	"encoding/hex"
 
 	"golang.org/x/crypto/nacl/secretbox"
@@ -35,12 +31,8 @@ var tpl *template.Template
 func init() {
 	tpl = template.Must(template.ParseGlob("./*.html"))
 
-	r := mux.NewRouter()
-
-	r.HandleFunc("/", index)
-	r.HandleFunc("/msg/", message)
-
-	csrf.Protect([]byte(randgen(20)))(r)
+	http.HandleFunc("/", index)
+	http.HandleFunc("/msg/", message)
 }
 
 // create a message
@@ -77,9 +69,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	} else {
-		err := tpl.ExecuteTemplate(w, "index.html", map[string]interface{}{
-			csrf.TemplateTag: csrf.TemplateField(r),
-		})
+		err := tpl.ExecuteTemplate(w, "index.html", nil)
 
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -172,12 +162,4 @@ func generatePassword() [32]byte {
 	io.ReadAtLeast(rand.Reader, password[:], 32)
 
 	return password
-}
-func randgen(length int) string {
-	randomBytes := make([]byte, 32)
-	_, err := rand.Read(randomBytes)
-	if err != nil {
-		panic(err)
-	}
-	return base32.StdEncoding.EncodeToString(randomBytes)[:length]
 }
