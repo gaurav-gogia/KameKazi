@@ -16,6 +16,7 @@ import (
 	"fmt"
 	"io"
 
+	"encoding/base32"
 	"encoding/hex"
 
 	"golang.org/x/crypto/nacl/secretbox"
@@ -37,13 +38,24 @@ func init() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", index)
+	r.HandleFunc("/submitMessage", submitMessage)
 	r.HandleFunc("/msg/", message)
 
-	csrf.Protect([]byte("32-byte-long-auth-key"))(r)
+	csrf.Protect([]byte(randgen(20)))(r)
 }
 
 // create a message
 func index(w http.ResponseWriter, r *http.Request) {
+	err := tpl.ExecuteTemplate(w, "index.html", map[string]interface{}{
+		csrf.TemplateTag: csrf.TemplateField(r),
+	})
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+}
+func submitMessage(w http.ResponseWriter, r *http.Request) {
 	ctx := appengine.NewContext(r)
 	var keySystem msgAndSecretKeys
 
@@ -70,14 +82,6 @@ func index(w http.ResponseWriter, r *http.Request) {
 		}
 
 		err = tpl.ExecuteTemplate(w, "secret.html", keySystem)
-
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-
-	} else {
-		err := tpl.ExecuteTemplate(w, "index.html", nil)
 
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -170,4 +174,12 @@ func generatePassword() [32]byte {
 	io.ReadAtLeast(rand.Reader, password[:], 32)
 
 	return password
+}
+func randgen(length int) string {
+	randomBytes := make([]byte, 32)
+	_, err := rand.Read(randomBytes)
+	if err != nil {
+		panic(err)
+	}
+	return base32.StdEncoding.EncodeToString(randomBytes)[:length]
 }
