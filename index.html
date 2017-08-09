@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
     <body>        
-        <form method="POST" action="/submitMessage">
+        <form method="POST">
             {{ .csrfField }}                
             <label> Message: <textarea name="umsg"> </textarea> </label>
             <input type="submit" name="send-msg" value="Send Message"/>

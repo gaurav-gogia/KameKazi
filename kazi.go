@@ -46,16 +46,6 @@ func init() {
 
 // create a message
 func index(w http.ResponseWriter, r *http.Request) {
-	err := tpl.ExecuteTemplate(w, "index.html", map[string]interface{}{
-		csrf.TemplateTag: csrf.TemplateField(r),
-	})
-
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-}
-func submitMessage(w http.ResponseWriter, r *http.Request) {
 	ctx := appengine.NewContext(r)
 	var keySystem msgAndSecretKeys
 
@@ -82,6 +72,15 @@ func submitMessage(w http.ResponseWriter, r *http.Request) {
 		}
 
 		err = tpl.ExecuteTemplate(w, "secret.html", keySystem)
+
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	} else {
+		err := tpl.ExecuteTemplate(w, "index.html", map[string]interface{}{
+			csrf.TemplateTag: csrf.TemplateField(r),
+		})
 
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
