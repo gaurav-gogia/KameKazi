@@ -38,7 +38,6 @@ func init() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", index)
-	r.HandleFunc("/submitMessage", submitMessage)
 	r.HandleFunc("/msg/", message)
 
 	csrf.Protect([]byte(randgen(20)))(r)
