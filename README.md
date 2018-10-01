@@ -21,3 +21,7 @@ https://kamekazi-169920.appspot.com
 - Create a pull request, and wait for Pull Request to get merged.
 
 Also make sure to star the repository.
+
+
+### Disclaimer
+Yes, documentation is bad. PR's that fix documentation are also welcome :)
