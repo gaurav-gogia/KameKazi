@@ -14,6 +14,8 @@ https://kamekazi-169920.appspot.com
 - Now create a new branch with this command: ``` git branch new-user-yourname ``` and then use that branch by this command: ``` git checkout new-user-yourname ```
 - Go ahead and make changes
 - You can add your details in contributers.md file.
+- See if you can solve an issue and send PR
+- New issues are also welcome
 - After making changes use this command to add the changes: ``` git add filename ```, and then ``` git commit -m "Added" ```
 - After that use this command: ``` git push origin new-user-yourname ```
 - Create a pull request, and wait for Pull Request to get merged.
