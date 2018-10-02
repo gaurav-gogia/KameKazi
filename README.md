@@ -19,13 +19,11 @@ https://kamekazi-169920.appspot.com
 - Go ahead and make changes
 - You can add your details in contributers.md file.
 - See if you can solve an issue and send PR
+- Star the repository.
 - New issues are also welcome
 - After making changes use this command to add the changes: ``` git add filename ```, and then ``` git commit -m "Added" ```
 - After that use this command: ``` git push origin new-user-yourname ```
 - Create a pull request, and wait for Pull Request to get merged.
-
-Also make sure to star the repository.
-
 
 ### Disclaimer
 Yes, documentation is bad. PR's that improve the documentation are welcome! =)
