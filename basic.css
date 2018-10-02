@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  padding: 0.5em 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #546267;
+  background: #BFBFBF;
+}
+textarea {
+  background: #FFFFFF;
+  color: #191A26;
+  border: 1px solid #191A26;
+  display: block;
+  width: 100%;
+  min-height: 5em;
+  font-size: 1.25em;
+  margin: 0.5em 0;
+}
+input[type=submit] {
+  background: #546267;
+  color: #FFFFFF;
+  font-size: 1.25em;
+  float: right;
+  margin: 0.5em 0;
+  border: none;
+  padding: 0.5em;
+}
+
+h2 > a {
+  color: #ED2C26;
+  text-decoration: none;
+}
+
+h2 > a:hover {
+  text-decoration: underline;
+}
+
+blockquote {
+  background: #FFFFFF;
+  padding: 2em;
+  font-size: 1.25em;
+}

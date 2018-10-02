@@ -4,6 +4,9 @@ runtime: go
 api_version: go1
 
 handlers:
+- url: /basic.css
+  static_files: basic.css
+  upload: basic.css
 - url: /.*
   script: _go_app
 - url: /msg/
