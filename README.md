@@ -8,6 +8,9 @@ The project has been written in Golang.
 # The project is live here:
 https://kamekazi-169920.appspot.com
 
+# How does it work?
+Here's an [awesome presentation](./Presentation.pptx) by [Neeraj Srivastava](https://github.com/nsrivastava645)
+
 
 ## How to Make a Pull Request
 
