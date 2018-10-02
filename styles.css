@@ -1,0 +1,39 @@
+body{
+	max-width:400px;
+	margin:auto;
+	font-family: Helvetica,Sans-Serif;	
+}
+
+form{
+	width:500px;
+}
+
+input{
+	width:470px;
+	margin:25px 0;
+}
+
+label{
+	font-weight: normal;
+}
+
+textarea{
+	width:470px;
+	height: 200px
+}
+
+input[type=submit]{
+	border: 2px black solid;
+	background-color: inherit;
+	height:40px;
+	display: block;
+	
+}
+
+
+
+input[type=submit]:hover{
+	background-color: black;
+	color:white;
+
+}
