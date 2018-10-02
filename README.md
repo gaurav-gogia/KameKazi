@@ -1,7 +1,11 @@
 # KameKazi
-Self destructing messages
 
-# App is live here:
+KameKazi is a project that allows you to send secure messages.
+Each message receives a completely unique ID and is encrypted, so absolutely nobody can see the message without the key, not even with access to the database. 
+All messages are destroyed as soon as the receiver opens them.
+The project has been written in Golang.
+
+# The project is live here:
 https://kamekazi-169920.appspot.com
 
 
@@ -24,4 +28,4 @@ Also make sure to star the repository.
 
 
 ### Disclaimer
-Yes, documentation is bad. PR's that fix documentation are also welcome :)
+Yes, documentation is bad. PR's that improve the documentation are welcome! =)
