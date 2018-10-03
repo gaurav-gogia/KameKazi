@@ -1,13 +1,36 @@
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" href="/basic.css" />
+      <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet"> 
+    <link rel="stylesheet" href="./basic.css" />
+
   </head>
   <body>
+
+    <!-- The landing page -->
+    <div id="landing-page">
+      <p style="color:#BFBFBF; font-size: 4rem;">KameKazi. <br> <span style="font-size:2rem">Send Secure, encrypted messages.</span></p>
+    </div>
+
+
     <form method="POST">
       <h1>Message</h1>
       <textarea name="umsg"></textarea>
       <input type="submit" name="send-msg" value="Send" />
     </form>
+
+
+    <!-- The script for the landing page -->
+    <script>
+        var landingPage = document.querySelector('#landing-page');
+
+        setTimeout(function(){ 
+          landingPage.style.transform = "translateY(-100%)";
+         }, 3000);
+
+         landingPage.addEventListener('click', function(){
+          landingPage.style.transform = "translateY(-100%)";
+         })
+    </script>
   </body>
 </html>
