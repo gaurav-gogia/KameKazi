@@ -9,5 +9,7 @@ handlers:
   upload: basic.css
 - url: /.*
   script: _go_app
+  secure: always
 - url: /msg/
   script: _go_app
+  secure: always
