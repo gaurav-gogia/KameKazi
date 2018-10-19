@@ -1,16 +1,25 @@
-# KameKazi
+[![Go Report Card](https://goreportcard.com/badge/github.com/DesmondANIMUS/KameKazi)](https://goreportcard.com/report/github.com/DesmondANIMUS/KameKazi) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/DesmondANIMUS/KameKazi/issues)
 
-KameKazi is a project that allows you to send secure messages.
+[![Banner](.github/banner.png)](.github/banner.png)
+
+KameKazi 🔐
+===
+
+
+*KameKazi* is a project that allows you to send secure messages.
 Each message receives a completely unique ID and is encrypted, so absolutely nobody can see the message without the key, not even with access to the database. 
 All messages are destroyed as soon as the receiver opens them.
 The project has been written in Golang.
 
-# The project is live here:
-https://kamekazi-169920.appspot.com
+# Try it
+
+A live version is hosted on appspot.com: [kamekazi-169920.appspot.com](https://kamekazi-169920.appspot.com)
 
 # How does it work?
+
 Here's an [awesome presentation](./Presentation.pptx) by [Neeraj Srivastava](https://github.com/nsrivastava645)
 
+# Contributing 
 
 ## How to Make a Pull Request (PR)
 
