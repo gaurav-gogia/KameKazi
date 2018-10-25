@@ -6,3 +6,4 @@
 4. [Jeevan Chapagain](https://github.com/jeevanc)
 5. [Ahmet Cetin](https://github.com/ahmetcetin)
 6. [Deepa Prajapati](https://github.com/Deepa003)
+7. [Taniya Thawani](https://github.com/Tanster221)
