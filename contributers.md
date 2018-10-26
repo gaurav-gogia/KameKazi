@@ -7,3 +7,4 @@
 5. [Ahmet Cetin](https://github.com/ahmetcetin)
 6. [Deepa Prajapati](https://github.com/Deepa003)
 7. [Taniya Thawani](https://github.com/Tanster221)
+8. [Neerad Vaidya](https://github.com/nsvaidya)
