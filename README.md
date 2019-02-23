@@ -1,4 +1,4 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/DesmondANIMUS/KameKazi)](https://goreportcard.com/report/github.com/DesmondANIMUS/KameKazi) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/DesmondANIMUS/KameKazi/issues)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gaurav-gogia/KameKazi)](https://goreportcard.com/report/github.com/gaurav-gogia/KameKazi) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/gaurav-gogia/KameKazi/issues)
 
 [![Banner](.github/banner.png)](.github/banner.png)
 
