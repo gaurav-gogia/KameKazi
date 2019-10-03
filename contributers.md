@@ -8,4 +8,3 @@
 6. [Deepa Prajapati](https://github.com/Deepa003)
 7. [Taniya Thawani](https://github.com/Tanster221)
 8. [Neerad Vaidya](https://github.com/nsvaidya)
-9. [Omurbek Kadyrbekov](https://github.com/omurbekjk)
