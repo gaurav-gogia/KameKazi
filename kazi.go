@@ -137,7 +137,7 @@ func decrypt(encrypted string, password [32]byte) (string, error) {
 	var nonce [24]byte
 	parts := strings.SplitN(encrypted, ":", 2)
 	if len(parts) < 2 {
-		return "", fmt.Errorf("expected nonce")
+		return "", fmt.Errorf("Expected nonce")
 	}
 
 	bs, err := hex.DecodeString(parts[0])
