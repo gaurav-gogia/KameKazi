@@ -3,7 +3,9 @@ package main
 import (
 	"crypto/rand"
 	"html/template"
+	"log"
 	"net/http"
+	"os"
 	"time"
 
 	uuid "github.com/nu7hatch/gouuid"
@@ -33,16 +35,15 @@ func main() {
 
 	http.HandleFunc("/", index)
 	http.HandleFunc("/msg/", message)
-	
+
 	port := os.Getenv("PORT")
 	if port == "" {
-        	port = "8080"
-        	log.Printf("Defaulting to port %s", port)
+		port = "8080"
+		log.Printf("Defaulting to port %s", port)
 	}
-}
 
-log.Printf("Listening on port %s", port)
-log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
+	log.Printf("Listening on port %s", port)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
 
 // create a message
