@@ -7,8 +7,8 @@ handlers:
   static_files: basic.css
   upload: basic.css
 - url: /.*
-  script: _go_app
+  script: auto
   secure: always
 - url: /msg/
-  script: _go_app
+  script: auto
   secure: always
