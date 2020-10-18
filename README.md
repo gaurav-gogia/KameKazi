@@ -11,9 +11,6 @@ Each message receives a completely unique ID and is encrypted, so absolutely nob
 All messages are destroyed as soon as the receiver opens them.
 The project has been written in Golang.
 
-# Try it
-
-A live version is hosted on appspot.com: [kamekazi-169920.appspot.com](https://kamekazi-169920.appspot.com)
 
 # How does it work?
 
